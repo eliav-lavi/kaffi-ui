@@ -1,0 +1,10 @@
+<div class="notifications">
+  <div *ngFor="let notification of notifications.reverse()" class="code">
+    <span class="time">
+      {{notification.time | date:"MMM-d-yyyy, hh:mm:ss a"}}:
+    </span>
+    <span>
+      {{notification.message}}
+    </span>
+  </div>
+</div>

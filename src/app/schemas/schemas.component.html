@@ -1,0 +1,18 @@
+<button mat-raised-button color="primary" (click)="addSchema()" id="add-button">Add New Schema</button>
+<div class="schemas-list">
+  <mat-accordion>
+    <mat-expansion-panel *ngFor="let schema of schemas.reverse()">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <span class="schema-name code">{{schema.name}}</span>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <span class="code">
+        {{schema.content}}
+      </span>
+      <div class="remove-button">
+        <button mat-raised-button color="warn" (click)="removeSchema(schema.id)">Remove</button>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
