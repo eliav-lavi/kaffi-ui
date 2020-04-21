@@ -1,15 +1,19 @@
 <div class="container">
-  <div class="main">
-    <div class="schemas section">
-      <app-schemas></app-schemas>
-    </div>
-    <mat-divider></mat-divider>
-    <div class="message section">
-      <app-message></app-message>
-    </div>
+  <div class="item tabs">
+    <mat-tab-group>
+      <mat-tab label="Schemas" class="tab-content">
+        <div class="tab-content">
+          <app-schemas></app-schemas>
+        </div>
+      </mat-tab>
+      <mat-tab label="Producer">
+        <div class="tab-content">
+          <app-message></app-message>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
   </div>
-  <mat-divider></mat-divider>
-  <div class="notifications section">
+  <div class="notifications item">
     <app-notifications></app-notifications>
   </div>  
 </div>

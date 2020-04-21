@@ -18,6 +18,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatTabsModule } from '@angular/material/tabs';
 
 import { NotificationsComponent } from './notifications/notifications.component';
 import { SchemasComponent } from './schemas/schemas.component';
@@ -45,7 +46,8 @@ import { SchemaDialogComponent } from './schema-dialog/schema-dialog.component';
     MatSelectModule,
     MatExpansionModule,
     MatDialogModule,
-    MatDividerModule
+    MatDividerModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

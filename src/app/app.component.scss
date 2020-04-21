@@ -1,26 +1,27 @@
 .container {
-  padding: 50px 400px;
+  height: 90%;
+  padding: 45px 350px;
   display: flex;
   flex-direction: column;
 }
 
-.main {
-  flex: 1 0 auto;
+.item {
+  flex: 1;
+  margin-bottom: 1vh;
 }
 
-.message {
-  margin-top: 40px;
-}
-
-.notifications {
-  margin-top: 40px;
-  flex-shrink: 0;
-  height: 100px;
-  background:black; // this should go, should be in component
-  border-radius: 5px;
+.tabs {
+  flex: 4;
   overflow-y: scroll;
 }
 
-.section {
-  margin-bottom: 40px;
+.tab-content {
+  padding: 3vh 2vw;
+  // background: rgb(193, 193, 193);
+}
+
+.notifications {
+  flex: 1;
+  border-radius: 5px;
+  overflow-y: scroll;
 }
