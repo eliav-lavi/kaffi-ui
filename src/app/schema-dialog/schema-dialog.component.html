@@ -2,16 +2,16 @@
 <div mat-dialog-content>
   <form class="schema" [formGroup]="schemaForm">
     <div>
-      <mat-form-field class="name-input code">
-        <mat-label>Name</mat-label>
-        <input matInput placeholder="MySchema" formControlName="name" required>
+      <mat-form-field class="subject-input code">
+        <mat-label>Subject</mat-label>
+        <input matInput placeholder="MySchema" formControlName="subject" required>
       </mat-form-field>
     </div>
     <div>
-      <mat-form-field class="content-input code" appearance="fill">
-        <mat-label>Content</mat-label>
+      <mat-form-field class="schema-input code" appearance="fill">
+        <mat-label>Schema</mat-label>
         <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="6" cdkAutosizeMaxRows="10"
-          formControlName="content" required></textarea>
+          formControlName="schema" required></textarea>
       </mat-form-field>
     </div>
   </form>

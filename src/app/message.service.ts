@@ -19,7 +19,7 @@ export class MessageService {
 
   produce(message: Message): Observable<Message> {
     console.log(message);
-    return this.http.post<Message>(`${this.serverUrl}/message`,
+    return this.http.post<Message>(`${this.serverUrl}/record`,
       humps.decamelizeKeys(message as Object),
       this.httpOptions).pipe(
         map(res => humps.camelizeKeys(res)),

@@ -11,7 +11,7 @@ import { SchemaDialogComponent, SchemaDialogType } from '../schema-dialog/schema
 })
 export class SchemasComponent implements OnInit {
 
-  schemas: PersistedSchema[] = [new PersistedSchema("a1", "test", "hello")];
+  schemas: PersistedSchema[] = [];
 
   constructor(public dialog: MatDialog, private schemaService: SchemaService) {
     schemaService.getAllSchemas().subscribe(schemas => this.schemas = schemas);
@@ -25,14 +25,9 @@ export class SchemasComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        const schema = new Schema(result.name, result.content);
+        const schema = new Schema(result.subject, result.schema);
         this.schemaService.addSchema(schema).subscribe(schema => this.schemas.push(schema));
       };
     });
-  }
-
-  removeSchema(id: string) {
-    this.schemaService.removeSchema(id)
-      .subscribe(removedSchema => this.schemas = this.schemas.filter(s => s.id != removedSchema.id));
   }
 }

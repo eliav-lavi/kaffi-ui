@@ -1,22 +1,22 @@
 export class Schema {
-  name: string;
-  content: string;
+  subject: string;
+  schema: string;
 
-  constructor(name: string, content: string) {
-    this.name = name;
-    this.content = content;
+  constructor(subject: string, schema: string) {
+    this.subject = subject;
+    this.schema = schema;
   }
 }
 
 export class PersistedSchema extends Schema {
   id: string;
 
-  constructor(id: string, name: string, content: string) {
-    super(name, content);
+  constructor(id: string, subject: string, schema: string) {
+    super(subject, schema);
     this.id = id;
   }
 
   static fromObject(obj: any): PersistedSchema {
-    return new PersistedSchema(obj.id, obj.name, obj.content);
+    return new PersistedSchema(obj.id, obj.subject, obj.schema);
   }
 }

@@ -14,7 +14,6 @@ export class NotificationService {
   notification$ = this.notificationsSource.asObservable();
 
   notify(notification: Notification): void {
-    console.log(`notification service: ${notification}`)
     this.notificationsSource.next(notification)
   }
 }
