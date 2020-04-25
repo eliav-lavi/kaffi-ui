@@ -22,18 +22,18 @@ export class MessageComponent implements OnInit {
   }
 
   messageForm = new FormGroup({
-    schema: new FormControl('', [Validators.required]),
+    schemaId: new FormControl('', [Validators.required]),
     topic: new FormControl('', [Validators.required]),
     key: new FormControl('', [Validators.required]),
-    payload: new FormControl('', [Validators.required])
+    value: new FormControl('', [Validators.required])
   });
 
   produce() {
-    const payload = this.messageForm.value.payload;
-    const schemaName = this.messageForm.value.schema;
+    const value = this.messageForm.value.value;
+    const schemaId = this.messageForm.value.schemaId;
     const topic = this.messageForm.value.topic;
     const key = this.messageForm.value.key;
-    const message = new Message(payload, schemaName, topic, key);
+    const message = new Message(topic, schemaId, key, value);
 
     this.messageService.produce(message).subscribe(res => console.log(res))
   }

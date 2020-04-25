@@ -29,15 +29,7 @@ export class SchemaService {
     return this.http.post<PersistedSchema>(`${this.serverUrl}/schema`, humps.decamelizeKeys(schema as Object), this.httpOptions).pipe(
       map(res => humps.camelizeKeys(res)),
       map(res => PersistedSchema.fromObject(res['response'])),
-      tap((persistedSchema: PersistedSchema) => this.notificationService.notify(new Notification(new Date, 'INFO', `successfully added schema ${persistedSchema.name}`))),
+      tap((persistedSchema: PersistedSchema) => this.notificationService.notify(new Notification(new Date, 'INFO', `successfully added schema to subject ${persistedSchema.subject}`))),
     );
-  }
-
-  removeSchema(id: string) {
-    return this.http.delete<PersistedSchema>(`${this.serverUrl}/schema/${id}`, this.httpOptions).pipe(
-      map(res => humps.camelizeKeys(res)),
-      map(res => PersistedSchema.fromObject(res['response'])),
-      tap((persistedSchema: PersistedSchema) => this.notificationService.notify(new Notification(new Date, 'INFO', `successfully deleted schema ${persistedSchema.name}`))),
-    )
   }
 }
