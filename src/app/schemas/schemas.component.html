@@ -4,15 +4,12 @@
     <mat-expansion-panel *ngFor="let schema of schemas.reverse()">
       <mat-expansion-panel-header>
         <mat-panel-title>
-          <span class="schema-name code">{{schema.name}}</span>
+          <span class="schema-subject code">{{schema.subject}}</span>
         </mat-panel-title>
       </mat-expansion-panel-header>
       <span class="code">
-        {{schema.content}}
+        {{schema.schema}}
       </span>
-      <div class="remove-button">
-        <button mat-raised-button color="warn" (click)="removeSchema(schema.id)">Remove</button>
-      </div>
     </mat-expansion-panel>
   </mat-accordion>
 </div>

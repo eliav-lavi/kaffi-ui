@@ -1,17 +1,17 @@
 export class Message {
-  payload: string;
-  schemaName: string;
   topic: string;
+  schemaId: number;
   key: string;
+  value: string;
 
-  constructor(payload: string, schemaName: string, topic: string, key: string) {
-    this.payload = payload;
-    this.schemaName = schemaName;
+  constructor(topic: string, schemaId: number, key: string, value: string) {
     this.topic = topic;
+    this.schemaId = schemaId;
     this.key = key;
+    this.value = value;
   }
 
   static fromObject(obj: any): Message {
-    return new Message(obj.payload, obj.schemaName, obj.topic, obj.key);
+    return new Message(obj.topic, obj.schemaId, obj.key, obj.value);
   }
 }

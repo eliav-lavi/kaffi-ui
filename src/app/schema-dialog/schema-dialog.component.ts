@@ -50,8 +50,8 @@ export class SchemaDialogComponent implements OnInit {
   }
 
   schemaForm = new FormGroup({
-    name: new FormControl(this.data.persistedSchema?.name || '', [Validators.required]),
-    content: new FormControl(this.data.persistedSchema?.content || '', [Validators.required]),
+    subject: new FormControl(this.data.persistedSchema?.subject || '', [Validators.required]),
+    schema: new FormControl(this.data.persistedSchema?.schema || '', [Validators.required]),
   });
 
 }
