@@ -21,7 +21,7 @@ export class SchemasComponent implements OnInit {
   }
 
   addSchema() {
-    const dialogRef = this.dialog.open(SchemaDialogComponent, { data: { type: SchemaDialogType.Add } });
+    const dialogRef = this.dialog.open(SchemaDialogComponent, { width: '700px', height: '500px', data: { type: SchemaDialogType.Add } });
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
