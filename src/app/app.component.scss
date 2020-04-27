@@ -1,8 +1,11 @@
 .container {
   height: 90%;
-  padding: 45px 350px;
+  margin: 45px 350px;
+  padding: 0px 20px;
   display: flex;
   flex-direction: column;
+  background: #fff;
+  border-radius: 20px;
 }
 
 .item {
@@ -24,4 +27,15 @@
   flex: 1;
   border-radius: 5px;
   overflow-y: scroll;
+}
+
+.app-name {
+  letter-spacing: 7px;
+  margin-right: 40px;
+  font-weight: bold;
+}
+
+.separator {
+  letter-spacing: -3px;
+  margin: 0px 40px;
 }
