@@ -21,7 +21,11 @@ export class SchemaService {
   getAllSchemas(): Observable<PersistedSchema[]> {
     return this.http.get<PersistedSchema[]>(`${this.serverUrl}/schema`, this.httpOptions).pipe(
       map(res => humps.camelizeKeys(res)),
-      map(res => res['response'].map(json => PersistedSchema.fromObject(json)))
+      map(res => res['response'].map(json => PersistedSchema.fromObject(json))),
+      catchError(err => {
+        this.notificationService.notify(new Notification(new Date, 'ERROR', `failed fetching existing schemas`));
+        throw err;
+      })
     )
   }
 
@@ -30,6 +34,10 @@ export class SchemaService {
       map(res => humps.camelizeKeys(res)),
       map(res => PersistedSchema.fromObject(res['response'])),
       tap((persistedSchema: PersistedSchema) => this.notificationService.notify(new Notification(new Date, 'INFO', `successfully added schema to subject ${persistedSchema.subject}`))),
+      catchError(err => {
+        this.notificationService.notify(new Notification(new Date, 'ERROR', `failed adding schema to subject ${schema.subject}`));
+        throw err;
+      })
     );
   }
 }
