@@ -10,22 +10,28 @@
 }
 
 .schema {
-  width: 33%;
+  width: 50%;
 }
 
 .topic {
-  width: 33%;
+  width: 50%;
 }
 
-.key {
-  width: 33%;
-}
-
-.value {
+.payload {
   width: 88%
 }
 
 button {
   margin-right: 10px;
   margin-left: 10px;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: row;
+  margin: 15px 0;
+}
+
+.radio-button {
+  margin: 5px;
 }

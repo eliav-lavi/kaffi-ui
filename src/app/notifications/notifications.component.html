@@ -4,6 +4,9 @@
       {{notification.time | date:"MMM-d-yyyy, hh:mm:ss a"}}:
     </span>
     <span>
+      {{notification.level | uppercase}}
+    </span>
+    <span>
       {{notification.message}}
     </span>
   </div>
