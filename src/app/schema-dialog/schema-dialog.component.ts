@@ -1,4 +1,5 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, ViewChild} from '@angular/core';
+
 import { PersistedSchema } from '../models/schema';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
@@ -25,8 +26,8 @@ export class SchemaDialogComponent implements OnInit {
 
   constructor(
     public dialogRef: MatDialogRef<SchemaDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
-
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {
+    }
 
   ngOnInit(): void {
     switch (this.data.type) {

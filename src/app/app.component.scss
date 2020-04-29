@@ -1,27 +1,42 @@
 .container {
-  height: 90%;
-  padding: 45px 350px;
+  height: 100%;
+  margin: 0px 25% 0px 25%;
+  padding: 0px 20px;
   display: flex;
   flex-direction: column;
+  background: #fff;
+  border-radius: 20px;
 }
 
 .item {
-  flex: 1;
   margin-bottom: 1vh;
 }
 
 .tabs {
-  flex: 4;
+  flex: 1 1 80%;
   overflow-y: scroll;
 }
 
 .tab-content {
   padding: 3vh 2vw;
-  // background: rgb(193, 193, 193);
 }
 
 .notifications {
-  flex: 1;
-  border-radius: 5px;
+  flex: 1 1 18%;
   overflow-y: scroll;
+}
+
+.footer {
+  flex: 1 1 2%;
+}
+
+.app-name {
+  letter-spacing: 7px;
+  margin-right: 40px;
+  font-weight: bold;
+}
+
+.separator {
+  letter-spacing: -3px;
+  margin: 0px 40px;
 }
