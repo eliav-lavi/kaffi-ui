@@ -1,6 +1,6 @@
 .container {
   height: 100%;
-  margin: 0px 350px 0px 350px;
+  margin: 0px 25% 0px 25%;
   padding: 0px 20px;
   display: flex;
   flex-direction: column;
@@ -13,23 +13,21 @@
 }
 
 .tabs {
-  flex: 16 0 auto;
+  flex: 1 1 80%;
   overflow-y: scroll;
 }
 
 .tab-content {
   padding: 3vh 2vw;
-  // background: rgb(193, 193, 193);
 }
 
 .notifications {
-  flex: 4 0 auto;
+  flex: 1 1 18%;
   overflow-y: scroll;
-  height: 10%;
 }
 
 .footer {
-  flex: 1 0 auto;
+  flex: 1 1 2%;
 }
 
 .app-name {
