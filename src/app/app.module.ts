@@ -24,7 +24,6 @@ import { NotificationsComponent } from './notifications/notifications.component'
 import { SchemasComponent } from './schemas/schemas.component';
 import { SchemaDialogComponent } from './schema-dialog/schema-dialog.component';
 
-import { NgJsonEditorModule } from 'ang-jsoneditor' 
 
 @NgModule({
   declarations: [
@@ -48,8 +47,7 @@ import { NgJsonEditorModule } from 'ang-jsoneditor'
     MatExpansionModule,
     MatDialogModule,
     MatDividerModule,
-    MatTabsModule,
-    NgJsonEditorModule
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

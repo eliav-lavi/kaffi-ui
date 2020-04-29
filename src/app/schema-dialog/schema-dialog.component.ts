@@ -1,5 +1,4 @@
 import { Component, OnInit, Inject, ViewChild} from '@angular/core';
-import { JsonEditorComponent, JsonEditorOptions } from 'ang-jsoneditor';
 
 import { PersistedSchema } from '../models/schema';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
@@ -24,22 +23,10 @@ export class SchemaDialogComponent implements OnInit {
 
   confirmCaption: string;
   title: string;
-  
-  @ViewChild(JsonEditorComponent, { static: true }) editor: JsonEditorComponent;
-
-  public editorOptions: JsonEditorOptions;
-  public jsondata: any;
 
   constructor(
     public dialogRef: MatDialogRef<SchemaDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData) {
-
-      this.editorOptions = new JsonEditorOptions()
-      this.editorOptions.modes = ['code', 'text', 'tree', 'view']; // set all allowed modes
-    //this.options.mode = 'code'; //set only one mode
-      
-      this.jsondata = {"products":[{"name":"car","product":[{"name":"honda","model":[{"id":"civic","name":"civic"},{"id":"accord","name":"accord"},{"id":"crv","name":"crv"},{"id":"pilot","name":"pilot"},{"id":"odyssey","name":"odyssey"}]}]}]}
-
     }
 
   ngOnInit(): void {
