@@ -1,6 +1,6 @@
 .container {
-  height: 90%;
-  margin: 45px 350px;
+  height: 100%;
+  margin: 0px 350px 0px 350px;
   padding: 0px 20px;
   display: flex;
   flex-direction: column;
@@ -9,12 +9,11 @@
 }
 
 .item {
-  flex: 1;
   margin-bottom: 1vh;
 }
 
 .tabs {
-  flex: 4;
+  flex: 16 0 auto;
   overflow-y: scroll;
 }
 
@@ -24,9 +23,13 @@
 }
 
 .notifications {
-  flex: 1;
-  border-radius: 5px;
+  flex: 4 0 auto;
   overflow-y: scroll;
+  height: 10%;
+}
+
+.footer {
+  flex: 1 0 auto;
 }
 
 .app-name {
